@@ -53,10 +53,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\src
+CMAKE_SOURCE_DIR = D:\Qt\Masonry\src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\bin
+CMAKE_BINARY_DIR = D:\Qt\Masonry\bin
 
 #=============================================================================
 # Target rules for target CMakeFiles/masonry.dir
@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = D:\Qt\bin
 CMakeFiles/masonry.dir/all: CMakeFiles/masonry_autogen.dir/all
 	$(MAKE) -f CMakeFiles\masonry.dir\build.make CMakeFiles/masonry.dir/depend
 	$(MAKE) -f CMakeFiles\masonry.dir\build.make CMakeFiles/masonry.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Qt\bin\CMakeFiles --progress-num=1,2,3,4,5 "Built target masonry"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Qt\Masonry\bin\CMakeFiles --progress-num=1,2,3,4,5 "Built target masonry"
 .PHONY : CMakeFiles/masonry.dir/all
 
 # Include target in all.
@@ -75,9 +75,9 @@ all: CMakeFiles/masonry.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/masonry.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\bin\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\Masonry\bin\CMakeFiles 6
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/masonry.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\bin\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\Masonry\bin\CMakeFiles 0
 .PHONY : CMakeFiles/masonry.dir/rule
 
 # Convenience name for target.
@@ -102,14 +102,14 @@ clean: CMakeFiles/masonry.dir/clean
 CMakeFiles/masonry_autogen.dir/all:
 	$(MAKE) -f CMakeFiles\masonry_autogen.dir\build.make CMakeFiles/masonry_autogen.dir/depend
 	$(MAKE) -f CMakeFiles\masonry_autogen.dir\build.make CMakeFiles/masonry_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Qt\bin\CMakeFiles --progress-num=6 "Built target masonry_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Qt\Masonry\bin\CMakeFiles --progress-num=6 "Built target masonry_autogen"
 .PHONY : CMakeFiles/masonry_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/masonry_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\bin\CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\Masonry\bin\CMakeFiles 1
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/masonry_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\bin\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\Masonry\bin\CMakeFiles 0
 .PHONY : CMakeFiles/masonry_autogen.dir/rule
 
 # Convenience name for target.

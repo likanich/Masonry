@@ -328,7 +328,6 @@ CMakeFiles/masonry.dir/main.cpp.obj
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QCommonStyle
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QLabel
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QLayout
- C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QMainWindow
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QScrollerProperties
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QWidget
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QtWidgets
@@ -462,9 +461,8 @@ CMakeFiles/masonry.dir/main.cpp.obj
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidgetaction.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwizard.h
- D:/Qt/src/main.cpp
- D:/Qt/src/mainwindow.h
- D:/Qt/src/masonry.h
+ D:/Qt/Masonry/src/main.cpp
+ D:/Qt/Masonry/src/masonry.h
 CMakeFiles/masonry.dir/mainwindow.cpp.obj
  C:/Qt/5.10.1/mingw53_32/include/QtCore/qalgorithms.h
  C:/Qt/5.10.1/mingw53_32/include/QtCore/qarraydata.h
@@ -572,10 +570,9 @@ CMakeFiles/masonry.dir/mainwindow.cpp.obj
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgets-config.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
- D:/Qt/src/mainwindow.cpp
- D:/Qt/src/mainwindow.h
+ D:/Qt/Masonry/src/mainwindow.cpp
+ D:/Qt/Masonry/src/mainwindow.h
 CMakeFiles/masonry.dir/masonry.cpp.obj
- C:/Qt/5.10.1/mingw53_32/include/QtCore/QDebug
  C:/Qt/5.10.1/mingw53_32/include/QtCore/qalgorithms.h
  C:/Qt/5.10.1/mingw53_32/include/QtCore/qarraydata.h
  C:/Qt/5.10.1/mingw53_32/include/QtCore/qatomic.h
@@ -686,8 +683,8 @@ CMakeFiles/masonry.dir/masonry.cpp.obj
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgets-config.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
- D:/Qt/src/masonry.cpp
- D:/Qt/src/masonry.h
+ D:/Qt/Masonry/src/masonry.cpp
+ D:/Qt/Masonry/src/masonry.h
 CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj
  C:/Qt/5.10.1/mingw53_32/include/QtCore/qalgorithms.h
  C:/Qt/5.10.1/mingw53_32/include/QtCore/qarraydata.h
@@ -795,6 +792,6 @@ CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgets-config.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
  C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
- D:/Qt/bin/masonry_autogen/EWIEGA46WW/moc_mainwindow.cpp
- D:/Qt/bin/masonry_autogen/mocs_compilation.cpp
- D:/Qt/src/mainwindow.h
+ D:/Qt/Masonry/bin/masonry_autogen/EWIEGA46WW/moc_mainwindow.cpp
+ D:/Qt/Masonry/bin/masonry_autogen/mocs_compilation.cpp
+ D:/Qt/Masonry/src/mainwindow.h

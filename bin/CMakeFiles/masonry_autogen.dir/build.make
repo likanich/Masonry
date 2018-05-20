@@ -42,10 +42,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\src
+CMAKE_SOURCE_DIR = D:\Qt\Masonry\src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\bin
+CMAKE_BINARY_DIR = D:\Qt\Masonry\bin
 
 # Utility rule file for masonry_autogen.
 
@@ -53,8 +53,8 @@ CMAKE_BINARY_DIR = D:\Qt\bin
 include CMakeFiles/masonry_autogen.dir/progress.make
 
 CMakeFiles/masonry_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=D:\Qt\bin\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target masonry"
-	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/Qt/bin/CMakeFiles/masonry_autogen.dir/AutogenInfo.cmake ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=D:\Qt\Masonry\bin\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target masonry"
+	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/Qt/Masonry/bin/CMakeFiles/masonry_autogen.dir/AutogenInfo.cmake ""
 
 masonry_autogen: CMakeFiles/masonry_autogen
 masonry_autogen: CMakeFiles/masonry_autogen.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/masonry_autogen.dir/clean:
 .PHONY : CMakeFiles/masonry_autogen.dir/clean
 
 CMakeFiles/masonry_autogen.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\src D:\Qt\src D:\Qt\bin D:\Qt\bin D:\Qt\bin\CMakeFiles\masonry_autogen.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\Masonry\src D:\Qt\Masonry\src D:\Qt\Masonry\bin D:\Qt\Masonry\bin D:\Qt\Masonry\bin\CMakeFiles\masonry_autogen.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/masonry_autogen.dir/depend
 

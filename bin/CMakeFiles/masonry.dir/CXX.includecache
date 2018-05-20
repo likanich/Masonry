@@ -34,10 +34,6 @@ inttypes.h
 stdint.h
 -
 
-C:/Qt/5.10.1/mingw53_32/include/QtCore/QDebug
-qdebug.h
-C:/Qt/5.10.1/mingw53_32/include/QtCore/qdebug.h
-
 C:/Qt/5.10.1/mingw53_32/include/QtCore/QEvent
 qcoreevent.h
 C:/Qt/5.10.1/mingw53_32/include/QtCore/qcoreevent.h
@@ -4784,43 +4780,39 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qdialog.h
 -
 
-D:/Qt/bin/masonry_autogen/EWIEGA46WW/moc_mainwindow.cpp
+D:/Qt/Masonry/bin/masonry_autogen/EWIEGA46WW/moc_mainwindow.cpp
 ../../../src/mainwindow.h
-D:/Qt/src/mainwindow.h
+D:/Qt/Masonry/src/mainwindow.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-D:/Qt/bin/masonry_autogen/mocs_compilation.cpp
+D:/Qt/Masonry/bin/masonry_autogen/mocs_compilation.cpp
 EWIEGA46WW/moc_mainwindow.cpp
-D:/Qt/bin/masonry_autogen/EWIEGA46WW/moc_mainwindow.cpp
+D:/Qt/Masonry/bin/masonry_autogen/EWIEGA46WW/moc_mainwindow.cpp
 
-D:/Qt/src/main.cpp
-mainwindow.h
-D:/Qt/src/mainwindow.h
+D:/Qt/Masonry/src/main.cpp
 masonry.h
-D:/Qt/src/masonry.h
+D:/Qt/Masonry/src/masonry.h
 QtWidgets
 -
 
-D:/Qt/src/mainwindow.cpp
+D:/Qt/Masonry/src/mainwindow.cpp
 mainwindow.h
-D:/Qt/src/mainwindow.h
+D:/Qt/Masonry/src/mainwindow.h
 
-D:/Qt/src/mainwindow.h
+D:/Qt/Masonry/src/mainwindow.h
 QMainWindow
 -
 
-D:/Qt/src/masonry.cpp
+D:/Qt/Masonry/src/masonry.cpp
 masonry.h
-D:/Qt/src/masonry.h
+D:/Qt/Masonry/src/masonry.h
 QScrollArea
 -
-QDebug
--
 
-D:/Qt/src/masonry.h
+D:/Qt/Masonry/src/masonry.h
 QWidget
 -
 QLabel

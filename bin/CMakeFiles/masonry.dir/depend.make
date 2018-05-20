@@ -327,7 +327,6 @@ CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtGui/qwind
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QCommonStyle
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QLabel
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QLayout
-CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QMainWindow
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QScrollerProperties
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QWidget
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/QtWidgets
@@ -461,9 +460,8 @@ CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/q
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidgetaction.h
 CMakeFiles/masonry.dir/main.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwizard.h
-CMakeFiles/masonry.dir/main.cpp.obj: D:/Qt/src/main.cpp
-CMakeFiles/masonry.dir/main.cpp.obj: D:/Qt/src/mainwindow.h
-CMakeFiles/masonry.dir/main.cpp.obj: D:/Qt/src/masonry.h
+CMakeFiles/masonry.dir/main.cpp.obj: D:/Qt/Masonry/src/main.cpp
+CMakeFiles/masonry.dir/main.cpp.obj: D:/Qt/Masonry/src/masonry.h
 
 CMakeFiles/masonry.dir/mainwindow.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/qalgorithms.h
 CMakeFiles/masonry.dir/mainwindow.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/qarraydata.h
@@ -571,10 +569,9 @@ CMakeFiles/masonry.dir/mainwindow.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWid
 CMakeFiles/masonry.dir/mainwindow.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgets-config.h
 CMakeFiles/masonry.dir/mainwindow.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/masonry.dir/mainwindow.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
-CMakeFiles/masonry.dir/mainwindow.cpp.obj: D:/Qt/src/mainwindow.cpp
-CMakeFiles/masonry.dir/mainwindow.cpp.obj: D:/Qt/src/mainwindow.h
+CMakeFiles/masonry.dir/mainwindow.cpp.obj: D:/Qt/Masonry/src/mainwindow.cpp
+CMakeFiles/masonry.dir/mainwindow.cpp.obj: D:/Qt/Masonry/src/mainwindow.h
 
-CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/QDebug
 CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/qalgorithms.h
 CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/qarraydata.h
 CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/qatomic.h
@@ -685,8 +682,8 @@ CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidget
 CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgets-config.h
 CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/masonry.dir/masonry.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
-CMakeFiles/masonry.dir/masonry.cpp.obj: D:/Qt/src/masonry.cpp
-CMakeFiles/masonry.dir/masonry.cpp.obj: D:/Qt/src/masonry.h
+CMakeFiles/masonry.dir/masonry.cpp.obj: D:/Qt/Masonry/src/masonry.cpp
+CMakeFiles/masonry.dir/masonry.cpp.obj: D:/Qt/Masonry/src/masonry.h
 
 CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/qalgorithms.h
 CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtCore/qarraydata.h
@@ -796,5 +793,5 @@ CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: C:/Qt/5.10.1/mi
 CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: C:/Qt/5.10.1/mingw53_32/include/QtWidgets/qwidget.h
 CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: masonry_autogen/EWIEGA46WW/moc_mainwindow.cpp
 CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: masonry_autogen/mocs_compilation.cpp
-CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: D:/Qt/src/mainwindow.h
+CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj: D:/Qt/Masonry/src/mainwindow.h
 

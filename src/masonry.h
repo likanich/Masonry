@@ -14,31 +14,6 @@ namespace masonry
 
         void setHeightForWidth(int width);
 
-//		// Returns height for given width.
-//		// Must be implemented by Item inheritor.
-//        virtual quint32 heightForWidth(quint32 width) const;
-
-//		// Returns Item geometry relative to container.
-//		// Called by Item inheritor to get the updated geometry after
-//		// container has changed it and notified Item via the geometryChanged signal.
-//        /*virtual QRect geometry() const
-//		{
-//			return _impl->geometry;
-//        }*/
-
-//		// Called by Container whenever it changes the Item geometry.
-//		virtual void setGeometry(const QRect &geometry)
-//		{
-//			_geometry = geometry;
-//			emit geometryChanged();
-//		}
-
-//	signals:
-//		// Container emits this signal when Item geometry has been changed
-//		void geometryChanged();
-
-//	protected:
-//		QRect _geometry;
     private:
         QPixmap pixmap;
     };
@@ -64,12 +39,9 @@ namespace masonry
         void setItemMinimumWidth(quint32 width);
         void setItemMaximumWidth(quint32 width);
 
-//		quint32 containerWidth() const;
         quint32 spacingBetweenItems() const;
         quint32 itemMinimumWidth() const;
         quint32 itemMaximumWidth() const;
-
-
 
         // Adds Item to the end of container.
         void addItem(Item *item);
@@ -86,8 +58,6 @@ namespace masonry
         virtual void resizeEvent(QResizeEvent *event);
     private:
         QList<Item *> items;
-//		class Impl;
-//		Impl *_impl;
 
 //        std::vector<Item *> items;
         quint32 minimumWidth;

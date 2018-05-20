@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Qt/src/main.cpp" "D:/Qt/bin/CMakeFiles/masonry.dir/main.cpp.obj"
-  "D:/Qt/src/mainwindow.cpp" "D:/Qt/bin/CMakeFiles/masonry.dir/mainwindow.cpp.obj"
-  "D:/Qt/src/masonry.cpp" "D:/Qt/bin/CMakeFiles/masonry.dir/masonry.cpp.obj"
-  "D:/Qt/bin/masonry_autogen/mocs_compilation.cpp" "D:/Qt/bin/CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj"
+  "D:/Qt/Masonry/src/main.cpp" "D:/Qt/Masonry/bin/CMakeFiles/masonry.dir/main.cpp.obj"
+  "D:/Qt/Masonry/src/mainwindow.cpp" "D:/Qt/Masonry/bin/CMakeFiles/masonry.dir/mainwindow.cpp.obj"
+  "D:/Qt/Masonry/src/masonry.cpp" "D:/Qt/Masonry/bin/CMakeFiles/masonry.dir/masonry.cpp.obj"
+  "D:/Qt/Masonry/bin/masonry_autogen/mocs_compilation.cpp" "D:/Qt/Masonry/bin/CMakeFiles/masonry.dir/masonry_autogen/mocs_compilation.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,7 +22,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
-  "D:/Qt/src"
+  "D:/Qt/Masonry/src"
   "masonry_autogen/include"
   "C:/Qt/5.10.1/mingw53_32/include"
   "C:/Qt/5.10.1/mingw53_32/include/QtWidgets"
