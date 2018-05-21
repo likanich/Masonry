@@ -1,4 +1,0 @@
-D:/Qt/Masonry/bin/CMakeFiles/edit_cache.dir
-D:/Qt/Masonry/bin/CMakeFiles/masonry.dir
-D:/Qt/Masonry/bin/CMakeFiles/rebuild_cache.dir
-D:/Qt/Masonry/bin/CMakeFiles/masonry_autogen.dir
