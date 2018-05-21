@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     QPixmap pix[100];
     for (int i = 1; i < 100; i++)
     {
-        pix[i].load("./Macrophoto/" + QString::number(i) + ".jpg");
+        pix[i].load(QCoreApplication::applicationDirPath() + "/Macrophoto/" + QString::number(i) + ".jpg");
     }
 
     for (int i = 1; i < 100; i++)

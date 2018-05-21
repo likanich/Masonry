@@ -22,7 +22,6 @@ Container::Container(const QSize &size)
 
 Container::~Container()
 {
-    //items.removeAll();
 }
 
 void Container::addItem(Item *item)
