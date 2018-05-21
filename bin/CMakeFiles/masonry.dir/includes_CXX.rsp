@@ -1,1 +1,0 @@
--ID:/Qt/Masonry/bin -ID:/Qt/Masonry/src -ID:/Qt/Masonry/bin/masonry_autogen/include -isystem C:/Qt/5.10.1/mingw53_32/include -isystem C:/Qt/5.10.1/mingw53_32/include/QtWidgets -isystem C:/Qt/5.10.1/mingw53_32/include/QtGui -isystem C:/Qt/5.10.1/mingw53_32/include/QtANGLE -isystem C:/Qt/5.10.1/mingw53_32/include/QtCore -isystem C:/Qt/5.10.1/mingw53_32/./mkspecs/win32-g++ 
