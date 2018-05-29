@@ -10,9 +10,9 @@ set(CMAKE_AUTOMOC ON)
 # Find the QtWidgets library
 find_package(Qt5Widgets)
 
-set(SOURCES main.cpp mainwindow.cpp masonry.cpp)
+set(SOURCES main.cpp masonryWidget.cpp masonry.cpp)
 
-set(HEADERS mainwindow.h masonry.h)
+set(HEADERS masonryWidget.h masonry.h)
 
 # Tell CMake to create the helloworld executable
 add_executable(masonry ${SOURCES} ${HEADERS})

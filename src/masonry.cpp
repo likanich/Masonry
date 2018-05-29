@@ -1,103 +1,117 @@
-#include "masonry.h"
-#include <QScrollArea>
+﻿#include "masonry.h"
 
-using namespace masonry;
-
-Container::Container(QWidget *parent, const QSize &size)
-    : QWidget(parent)
+masonry::Container::Container(const QSize & size)
 {
-    setContainerSize(size);
-    setSpacingBetweenItems(200);
-    setMinimumSize(200,200);
+	setContainerSize(size);
 }
 
-Container::Container(const QSize &size)
-{
-    setContainerSize(size);
-    setItemMinimumWidth(200);
-    setItemMaximumWidth(250);
-    setSpacingBetweenItems(10);
-    setMinimumWidth(itemMinimumWidth() + 2 * spacingBetweenItems());
-}
-
-Container::~Container()
+masonry::Container::~Container()
 {
 }
 
-void Container::addItem(Item *item)
+void masonry::Container::setContainerSize(const QSize & size)
 {
-    item->setParent(this);
-    items.append(item);
-    update();
+	_size = size;
 }
 
-void Container::setContainerSize(const QSize &size)
+void masonry::Container::setSpacingBetweenItems(quint32 spacing)
 {
-    resize(size);
+	_spacingBetweenItems = spacing;
 }
 
-void Container::update()
+void masonry::Container::setItemMinimumWidth(quint32 width)
+{
+	_itemMinimumWidth = width;
+}
+
+void masonry::Container::setItemMaximumWidth(quint32 width)
+{
+	_itemMaximumWidth = width;
+}
+
+void masonry::Container::setFixedContainerHeight(quint32 height)
+{
+	_fixedContainerHeight = height;
+}
+
+quint32 masonry::Container::containerWidth() const
+{
+	return _size.width();
+}
+
+quint32 masonry::Container::spacingBetweenItems() const
+{
+	return _spacingBetweenItems;
+}
+
+quint32 masonry::Container::itemMinimumWidth() const
+{
+	return _itemMinimumWidth;
+}
+
+quint32 masonry::Container::itemMaximumWidth() const
+{
+	return _itemMaximumWidth;
+}
+
+quint32 masonry::Container::fixedContainerHeight() const
+{
+	return _fixedContainerHeight;
+}
+
+void masonry::Container::addItem(Item * item)
+{
+	_items.push_back(item);
+}
+
+void masonry::Container::removeItem(Item * item)
+{
+}
+
+std::vector<masonry::Item*> masonry::Container::items() const
+{
+	return std::vector<Item*>();
+}
+
+void masonry::Container::update()
 {
     quint32 x = 0;
-    quint32 size = (this->width()-spacingBetweenItems())/(itemMinimumWidth() + spacingBetweenItems());
-    quint32 width = (this->width() - (size+1)*spacingBetweenItems())/size;
-    if (width > itemMaximumWidth())
-        width = itemMaximumWidth();
-    quint32 y[size] = {0};
+	quint32 size = (containerWidth() - spacingBetweenItems()) / (itemMinimumWidth() + spacingBetweenItems());
+	quint32 width = (containerWidth() - (size + 1)*spacingBetweenItems()) / size;
+	if (width > itemMaximumWidth())
+		width = itemMaximumWidth();
+	quint32 *y = new quint32[size];
+	for (quint32 i = 0; i < size; i++)
+	{
+		y[i] = { 0 };
+	}
+	for (quint32 i = 0; i < _items.size(); i++)
+	{
+        QRect itemGeometry(x + spacingBetweenItems(),
+						   y[i%size] + spacingBetweenItems(), 
+                           width,
+                           _items[i]->heightForWidth(width));
 
-    for(int i = 0; i < items.size(); i++)
-    {
-        items[i]->setHeightForWidth(width);
-        items[i]->setGeometry(x+spacingBetweenItems(), y[i%size]+spacingBetweenItems(), spacingBetweenItems()+ items[i]->width(), spacingBetweenItems()+items[i]->height());
-        x=((i+1)%size)*(items[i]->width());
-        y[i%size] += items[i]->height();
-    }
-    quint32 height = y[0];
-    for(quint8 i = 0; i < size; i++)
-    {
-        if (y[i] > height)
-            height = y[i];
-    }
-    setFixedHeight(height + spacingBetweenItems());
+		_items[i]->setGeometry(itemGeometry);
+
+        x = ((i + 1) % size)*(width+spacingBetweenItems());
+        y[i%size] += _items[i]->heightForWidth(width) + spacingBetweenItems();
+	}
+	quint32 height = y[0];
+	for (quint8 i = 0; i < size; i++)
+	{
+		if (y[i] > height)
+			height = y[i];
+	}
+	setFixedContainerHeight(height + spacingBetweenItems());
 }
 
-quint32 Container::spacingBetweenItems() const
-{
-    return spacingBetweenItem;
-}
 
-quint32 Container::itemMaximumWidth() const
+masonry::Item::~Item()
 {
-    return maximumWidth;
-}
 
-quint32 Container::itemMinimumWidth() const
-{
-    return minimumWidth;
 }
+void masonry::Item::geometryChanged()
+{
 
-void Container::resizeEvent(QResizeEvent *event)
-{
-    update();
-}
-
-void Container::setItemMinimumWidth(quint32 width)
-{
-    minimumWidth = width;
-}
-void Container::setItemMaximumWidth(quint32 width)
-{
-    maximumWidth = width;
-}
-
-Item::Item(const QPixmap &pixmap, QWidget *parent) : QLabel(parent)
-{
-    this->pixmap = pixmap;
-    setHeightForWidth(200);
-}
-
-void Item::setHeightForWidth(int width)
-{
-    this->resize(pixmap.scaledToWidth(width).size());
-    this->setPixmap(pixmap.scaledToWidth(width));
 }

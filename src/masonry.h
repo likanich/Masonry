@@ -1,67 +1,92 @@
-#include <QWidget>
-#include <QLabel>
-#include <QPixmap>
-//#include <vector>
+﻿#pragma once
+#include <QtGlobal>
+#include <QObject>
+#include <QSize>
+#include <QRect>
+#include <vector>
 
 namespace masonry
 {
-    // Abstract representation of element to be displayed.
-    class Item : public QLabel
-    {
-    public:
-        explicit Item(const QPixmap &pixmap, QWidget *parent = 0);
-        //~Item() = 0;
+	// Abstract representation of element to be displayed.
+    class Item
+	{
+	public:
+		virtual ~Item()=0;
 
-        void setHeightForWidth(int width);
+		// Returns height for given width.
+		// Must be implemented by Item inheritor.
+		virtual quint32 heightForWidth(quint32 width) = 0;
 
-    private:
-        QPixmap pixmap;
-    };
+		// Returns Item geometry relative to container.
+		// Called by Item inheritor to get the updated geometry after
+		// container has changed it and notified Item via the geometryChanged signal.
+		virtual QRect geometry() const
+		{
+			return _geometry;
+		}
 
-    class Container : public QWidget
-    {
-    public:
-        // Ctor accepts initial container size.
-        explicit Container(QWidget *parent, const QSize &size);
-        explicit Container(const QSize &size);
-        ~Container();
+		// Called by Container whenever it changes the Item geometry.
+		virtual void setGeometry(const QRect &geometry)
+		{
+			_geometry = geometry;
+			emit geometryChanged();
+		}
 
-        // Sets new container size.
-        void setContainerSize(const QSize &size);
+	signals:
+		// Container emits this signal when Item geometry has been changed
+		void geometryChanged();
 
-        // Sets fixed vertical/horizontal spacing between the items.
-        void setSpacingBetweenItems(quint32 spacing)
-        {
-            spacingBetweenItem = spacing;
-        }
+	//protected:
+		QRect _geometry;
+	};
 
-        // Specifies the min/max values for Item width.
-        void setItemMinimumWidth(quint32 width);
-        void setItemMaximumWidth(quint32 width);
+	class Container
+	{
+	public:
+		// Ctor accepts initial container size.
+		explicit Container(const QSize &size);
+		~Container();
 
-        quint32 spacingBetweenItems() const;
-        quint32 itemMinimumWidth() const;
-        quint32 itemMaximumWidth() const;
+		// Sets new container size.
+		void setContainerSize(const QSize &size);
 
-        // Adds Item to the end of container.
-        void addItem(Item *item);
+		// Sets fixed vertical/horizontal spacing between the items.
+		void setSpacingBetweenItems(quint32 spacing);
 
-//		// Removes Item from container.
-//		void removeItem(Item *item);
+		// Specifies the min/max values for Item width.
+		void setItemMinimumWidth(quint32 width);
+		void setItemMaximumWidth(quint32 width);
+		void setFixedContainerHeight(quint32 height);
 
-//		// Returns ordered list of stored Items
-//		std::vector<Item *> items() const;
+		quint32 containerWidth() const;
+		quint32 spacingBetweenItems() const;
+		quint32 itemMinimumWidth() const;
+		quint32 itemMaximumWidth() const;
+		quint32 fixedContainerHeight() const;
 
-        // Recalculates geometry of all items
-        void update();
-    signals:
-        virtual void resizeEvent(QResizeEvent *event);
-    private:
-        QList<Item *> items;
+		// Adds Item to the end of container.
+		void addItem(Item *item);
 
-//        std::vector<Item *> items;
-        quint32 minimumWidth;
-        quint32 maximumWidth;
-        quint32 spacingBetweenItem;
-    };
+		// Removes Item from container.
+		void removeItem(Item *item);
+
+		// Returns ordered list of stored Items
+		std::vector<Item *> items() const;
+
+		// Recalculates geometry of all items
+		void update();
+
+	private:
+		class Impl;
+		Impl *_impl;
+
+		QSize _size;
+		quint32 _itemMinimumWidth = 200;
+		quint32 _itemMaximumWidth = 250;
+		quint32 _spacingBetweenItems = 10;
+		quint32 _fixedContainerHeight;
+
+		std::vector<Item *> _items;
+	};
+
 }
