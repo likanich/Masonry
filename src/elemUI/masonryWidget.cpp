@@ -1,6 +1,14 @@
 #include "masonryWidget.h"
-#include <math.h> 
-#include "QDebug"
+
+MasonryWidget::MasonryWidget(const QSize & size, const quint32 itemMinimumWidth, const quint32 itemMaximumWidth, const quint32 spacingBetweenItems)
+{
+	container = new masonry::Container(size);
+	container->setItemMinimumWidth(itemMinimumWidth);
+	container->setItemMaximumWidth(itemMaximumWidth);
+	container->setSpacingBetweenItems(spacingBetweenItems);
+	resize(size);
+	setMinimumWidth(container->spacingBetweenItems() * 2 + container->itemMinimumWidth());
+}
 
 MasonryWidget::MasonryWidget(QWidget * parent, const QSize & size)
 	: QWidget(parent)
@@ -38,24 +46,3 @@ void MasonryWidget::resizeEvent(QResizeEvent *event)
     setFixedHeight(container->fixedContainerHeight());
     update();
 }
-
-
-
-MasonryItem::MasonryItem(const QPixmap & pixmap)
-	: _pixmap(pixmap)
-{
-    resize(pixmap.size());
-    setPixmap(pixmap);
-}
-
-MasonryItem::~MasonryItem()
-{
-}
-
-quint32 MasonryItem::heightForWidth(quint32 width)
-{
-    
-    return round((double)size().height() * width / (double)size().width());
-}
-
-

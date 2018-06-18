@@ -1,45 +1,11 @@
 ﻿#pragma once
 #include <QtGlobal>
-#include <QObject>
 #include <QSize>
-#include <QRect>
 #include <vector>
+#include "item.h"
 
 namespace masonry
 {
-	// Abstract representation of element to be displayed.
-    class Item
-	{
-	public:
-		virtual ~Item()=0;
-
-		// Returns height for given width.
-		// Must be implemented by Item inheritor.
-		virtual quint32 heightForWidth(quint32 width) = 0;
-
-		// Returns Item geometry relative to container.
-		// Called by Item inheritor to get the updated geometry after
-		// container has changed it and notified Item via the geometryChanged signal.
-		virtual QRect geometry() const
-		{
-			return _geometry;
-		}
-
-		// Called by Container whenever it changes the Item geometry.
-		virtual void setGeometry(const QRect &geometry)
-		{
-			_geometry = geometry;
-			emit geometryChanged();
-		}
-
-	signals:
-		// Container emits this signal when Item geometry has been changed
-		void geometryChanged();
-
-	//protected:
-		QRect _geometry;
-	};
-
 	class Container
 	{
 	public:
@@ -54,9 +20,9 @@ namespace masonry
 		void setSpacingBetweenItems(quint32 spacing);
 
 		// Specifies the min/max values for Item width.
-		void setItemMinimumWidth(quint32 width);
-		void setItemMaximumWidth(quint32 width);
-		void setFixedContainerHeight(quint32 height);
+		void setItemMinimumWidth(const quint32 width);
+		void setItemMaximumWidth(const quint32 width);
+		void setFixedContainerHeight(const quint32 height);
 
 		quint32 containerWidth() const;
 		quint32 spacingBetweenItems() const;

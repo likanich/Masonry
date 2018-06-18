@@ -1,4 +1,4 @@
-﻿#include "masonry.h"
+﻿#include "container.h"
 
 masonry::Container::Container(const QSize & size)
 {
@@ -76,7 +76,7 @@ std::vector<masonry::Item*> masonry::Container::items() const
 void masonry::Container::update()
 {
     quint32 x = 0;
-	quint32 size = (containerWidth() - spacingBetweenItems()) / (itemMinimumWidth() + spacingBetweenItems());
+	const quint32 size = (containerWidth() - spacingBetweenItems()) / (itemMinimumWidth() + spacingBetweenItems());
 	quint32 width = (containerWidth() - (size + 1)*spacingBetweenItems()) / size;
 	if (width > itemMaximumWidth())
 		width = itemMaximumWidth();
@@ -104,14 +104,4 @@ void masonry::Container::update()
 			height = y[i];
 	}
 	setFixedContainerHeight(height + spacingBetweenItems());
-}
-
-
-masonry::Item::~Item()
-{
-
-}
-void masonry::Item::geometryChanged()
-{
-
 }
